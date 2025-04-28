@@ -1,8 +1,6 @@
 workflows:
   android-workflow:
     name: Android build workflow
-    environment:
-      android: "latest"
     scripts:
       - ./gradlew clean
       - ./gradlew assembleRelease
