@@ -1,17 +1,17 @@
-// build.gradle (niveau projet)
 buildscript {
     repositories {
-        google()  // Repositories de Google pour récupérer les dépendances Android
-        jcenter() // Repositories pour récupérer d'autres dépendances
+        google()
+        mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.2.0' // Plugin Gradle Android
+        // Utilisation du plugin Android Gradle compatible avec Gradle 8.x
+        classpath 'com.android.tools.build:gradle:7.0.4'
     }
 }
 
 allprojects {
     repositories {
-        google()  // Repositories pour tous les modules du projet
-        jcenter()
+        google()
+        mavenCentral()
     }
 }
