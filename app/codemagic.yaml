@@ -2,9 +2,9 @@ workflows:
   android-workflow:
     name: Android build workflow
     environment:
-      flutter: stable
+      android: "latest"
     scripts:
-      - flutter pub get
-      - flutter build apk --release
+      - ./gradlew clean
+      - ./gradlew assembleRelease
     artifacts:
-      - build/app/outputs/flutter-apk/app-release.apk
+      - app/build/outputs/apk/release/app-release.apk
