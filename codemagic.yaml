@@ -2,7 +2,8 @@ workflows:
   android-workflow:
     name: Android build workflow
     scripts:
-      - ./gradlew clean
-      - ./gradlew assembleRelease
+      - chmod +x gradlew  # Ajoute les permissions d'exécution
+      - ./gradlew clean   # Lancement du nettoyage
+      - ./gradlew assembleRelease  # Construction de l'APK
     artifacts:
       - app/build/outputs/apk/release/app-release.apk
